@@ -213,7 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Add this to your existing script.js
 document.getElementById('logoHome').addEventListener('click', function() {
-    // Scroll to top smoothly
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
