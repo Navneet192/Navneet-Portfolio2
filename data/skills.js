@@ -34,19 +34,11 @@ const skillsData = {
       name: "C",
       percentage: 50,
     },
-    {
-      name: "JavaScript",
-      percentage: 55,
-    }
   ],
   frameworks: [
     {
       name: "Django",
       percentage: 55,
-    },
-    {
-      name: "React.js",
-      percentage: 60,
     },
   ],
   database: [
