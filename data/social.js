@@ -8,7 +8,7 @@ const socialData = [
     {
         name: "GitHub",
         icon: "fab fa-github",
-        url: "https://github.com/navnt00",
+        url: "https://github.com/Navneet192",
         color: "#333"
     },
     {

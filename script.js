@@ -2,21 +2,17 @@ import projectsData from "./data/projects.js";
 import skillsData from "./data/skills.js";
 import socialData from "./data/social.js";
 
-// Dark mode toggle
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggle = document.querySelector(".theme-toggle");
   const body = document.body;
 
-  // Check for saved theme preference
   if (localStorage.getItem("darkMode") === "enabled") {
     body.classList.add("dark-mode");
   }
 
-  // Toggle dark mode
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
 
-    // Save preference
     if (body.classList.contains("dark-mode")) {
       localStorage.setItem("darkMode", "enabled");
     } else {
@@ -25,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -35,7 +30,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Mobile menu
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -44,7 +38,6 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Close menu when clicking a link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
@@ -148,14 +141,9 @@ function renderSkills() {
 import aboutData from "./data/about.js";
 
 function renderAbout() {
-  // Update title
   document.getElementById("aboutTitle").textContent = aboutData.title;
-
-  // Update description
   document.getElementById("aboutDescription").textContent =
     aboutData.description;
-
-  // Update image
   const aboutImage = document.getElementById("aboutImage");
   aboutImage.src = aboutData.image.src;
   aboutImage.alt = aboutData.image.alt;
@@ -192,12 +180,5 @@ document.addEventListener("DOMContentLoaded", function () {
   renderSkills();
   renderProjects();
   createSocialLinks();
-});
-
-// Add this to your existing script.js
-document.getElementById("logoHome").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  renderAbout();
 });
