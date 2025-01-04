@@ -30,7 +30,7 @@ git clone https://github.com/yourusername/Navneet-portfolio.git
 
 2. Navigate to the project directory:
 ```sh
-cd Navneet-portfolio
+cd Navneet-portfolio2
 ```
 
 3. Open the index.html file in your browser:
